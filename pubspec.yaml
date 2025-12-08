@@ -1,0 +1,23 @@
+name: astro_fm_app
+description: A cross-platform starter app for Astro.FM (Android, iOS, Web, Windows).
+publish_to: 'none'
+version: 4.0.0+0
+
+environment:
+  sdk: ">=2.18.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.5
+  flutter_riverpod: ^2.3.6
+  firebase_core: ^2.10.0
+  just_audio: ^0.9.33
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
