@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'widgets/backend_status.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -65,6 +66,13 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Astro.FM'),
         actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: BackendStatus(
+              // For Android emulator use 10.0.2.2, for desktop use localhost, or use your PC LAN IP on a device
+              url: kIsWeb || defaultTargetPlatform == TargetPlatform.windows ? 'http://localhost:7777/status' : 'http://10.0.2.2:7777/status',
+            ),
+          ),
           IconButton(
             tooltip: 'About',
             icon: const Icon(Icons.info_outline),
